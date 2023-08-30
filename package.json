@@ -16,11 +16,15 @@
   },
   "homepage": "https://github.com/minio/cookbook",
   "scripts": {
-    "lint": "remark -q ."
+    "lint": "remark -q .",
+    "prepare": "yarn run snyk-protect",
+    "snyk-protect": "snyk-protect"
   },
   "dependencies": {
     "remark-cli": "^4.0.0",
     "remark-lint": "^6.0.0",
-    "remark-preset-lint-recommended": "^3.0.0"
-  }
+    "remark-preset-lint-recommended": "^3.0.0",
+    "@snyk/protect": "latest"
+  },
+  "snyk": true
 }
